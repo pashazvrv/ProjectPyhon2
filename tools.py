@@ -17,46 +17,31 @@ class Date:
         self.year = current_time.year
     def get_weekday(self):
         day = datetime.weekday(self.current_time)
-        if (day == 6):
-           return 'Воскресенье'
-        if (day == 0):
-           return 'Понедельник'
-        if (day == 1):
-           return 'Вторник'
-        if (day == 2):
-           return 'Среда'
-        if (day == 3):
-           return 'Четверг'
-        if (day == 4):
-           return 'Пятница'
-        if (day == 5):
-           return 'Суббота'
+        d = {}
+        d[6] = 'Воскресенье'
+        d[0] = 'Понедельник'
+        d[1] = 'Вторник'
+        d[2] = 'Среда'
+        d[3] = 'Четверг'
+        d[4] = 'Пятница'
+        d[5] = 'Суббота'
+        return d[day]
     def get_month(self):
+        d = {}
         month = self.current_time.month
-        if (month == 1):
-            return 'январь'
-        if (month == 2):
-            return 'февраль'
-        if (month == 3):
-            return 'март'
-        if (month == 4):
-            return 'апрель'
-        if (month == 5):
-            return 'май'
-        if (month == 6):
-            return 'июнь'
-        if (month == 7):
-            return 'июль'
-        if (month == 8):
-            return 'август'
-        if (month == 9):
-            return 'сентябрь'
-        if (month == 10):
-            return 'октябрь'
-        if (month == 11):
-            return 'ноябрь'
-        if (month == 12):
-            return 'декабрь'
+        d[1] = 'январь'
+        d[2] = 'февраль'
+        d[3] = 'март'
+        d[4] = 'апрель'
+        d[5] = 'май'
+        d[6] = 'июнь'
+        d[7] = 'июль'
+        d[8] = 'август'
+        d[9] = 'сентябрь'
+        d[10] = 'октябрь'
+        d[11] = 'ноябрь'
+        d[12] = 'декабрь'
+        return d[month]
         
 def get_info_about_day():
     date = Date()

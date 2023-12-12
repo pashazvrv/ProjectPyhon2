@@ -5,10 +5,14 @@ from datetime import datetime
 import Calendar
 from telebot import types # для указание типов
 import config
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
 
 date = 0
 
-bot = telebot.TeleBot('6430517463:AAFYq8-Rej1RVX8Kjc1Z3OFpyW7OJrU9vgM')
+bot = telebot.TeleBot(os.getenv('s'))
 
 @bot.message_handler(commands=['date'])
 def date(m, res = False):
